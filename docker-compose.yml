@@ -10,6 +10,7 @@ services:
     ports:
       - '80:80'
   foo:
+    image: 263108651745.dkr.ecr.ap-southeast-2.amazonaws.com/foo-ecrrepo
     build: ./foo
     expose:
       - '8080'
@@ -18,6 +19,7 @@ services:
         aliases:
           - foo
   boo:
+    image: 263108651745.dkr.ecr.ap-southeast-2.amazonaws.com/boo-ecrrepo
     build: ./boo
     expose:
       - '8080'
